@@ -1,0 +1,173 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+/* Layout */
+
+main {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Panels */
+
+.panel {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #d0d0d0;
+}
+
+.panel h2 {
+    margin-bottom: 1rem;
+}
+
+/* Header */
+
+header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Form Layout */
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+/* Buttons */
+
+button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #2d6a4f;
+    color: white;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Error Messages */
+
+#partyError,
+#lootError,
+#splitError {
+    margin-top: 0.5rem;
+    color: #b00020;
+    font-weight: bold;
+}
+
+/* Hidden Class */
+
+.hidden {
+    display: none;
+}
+
+/* Loot Table */
+
+#lootRows {
+    display: contents;
+}
+
+.loot-table {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.loot-header {
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.loot-row {
+    display: contents;
+}
+
+.loot-cell {
+    padding: 0.4rem 0;
+}
+
+.loot-cell button {
+    width: 100%;
+    margin-top: 0;
+}
+
+/* Totals */
+
+#lootTotals {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+#resultsSection {
+    margin-top: 1rem;
+}
+
+#resultsSection p {
+    margin-bottom: 0.5rem;
+}
+
+/* Empty State */
+
+#noLootMessage {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Reflection */
+
+.reflection p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Layout */
+
+@media (min-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .reflection {
+        grid-column: 1 / -1;
+    }
+}
